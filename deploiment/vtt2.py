@@ -51,10 +51,12 @@ def create_map(df_chantiers, df_capteurs):
 
     # Créer et retourner la carte
     return pdk.Deck(layers=[chantiers_layer, capteurs_layer], initial_view_state=view_state)
+    
 
 # Titre de l'application
 st.title("Visualisation des chantiers et des capteurs")
-
+deck = create_map(df_chantiers, df_capteurs)
+st.write(deck.to_html(), unsafe_allow_html=True)
 # Afficher la carte dans l'application Streamlit
 st.pydeck_chart(create_map(df_chantiers, df_capteurs))
 
