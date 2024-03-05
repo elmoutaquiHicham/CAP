@@ -59,5 +59,3 @@ st.title("Visualisation des chantiers et des capteurs")
 # Afficher la carte dans l'application Streamlit
 st.pydeck_chart(create_map(df_chantiers, df_capteurs))
 
-if __name__ == "__main__":
-    main()
