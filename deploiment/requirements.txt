@@ -1,8 +1,8 @@
 # requirements.txt
 matplotlib==3.4.3
 seaborn==0.11.2
-pydeck
 streamlit
 pandas
 openpyxl
 altair
+pydeck==0.7.1
