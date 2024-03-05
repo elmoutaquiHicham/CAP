@@ -1,8 +1,6 @@
-# requirements.txt
-matplotlib==3.4.3
-seaborn==0.11.2
-streamlit
-pandas
-openpyxl
-altair
-pydeck==0.7.1
+numpy
+pandas==1.4.3
+altair==4.1.0
+matplotlib
+typing_extensions
+streamlit==1.11.0
