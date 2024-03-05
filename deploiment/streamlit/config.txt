@@ -1,0 +1,9 @@
+[general]
+email = "hichamelmoutaqui3@gmail.com"
+showWatermark = false
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
