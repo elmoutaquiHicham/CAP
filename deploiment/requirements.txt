@@ -4,4 +4,4 @@ altair==4.1.0
 matplotlib
 typing_extensions
 streamlit==1.11.0
-pydeck==0.7.1
+pydeck==0.7.1  # Specify the version here
