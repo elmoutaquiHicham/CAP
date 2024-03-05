@@ -5,8 +5,8 @@ import pydeck as pdk
 # Fonction pour charger les données (ajustez selon votre source de données)
 def load_data():
     # Exemple de chargement de données - remplacez par votre propre chargement de données
-    df_chantiers = pd.read_excel("deploiment/chantiers.csv")
-    df_capteurs = pd.read_excel("deploiment/capteurs.csv")
+    df_chantiers = pd.read_csv("deploiment/chantiers.csv")
+    df_capteurs = pd.read_csv("deploiment/capteurs.csv")
 
     return df_chantiers, df_capteurs
 
