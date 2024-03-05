@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 
+def convertir_et_nettoyer(df, colonnes):
+    for colonne in colonnes:
+        # Remplacer les virgules par des points et convertir en float
+        df[colonne] = df[colonne].str.replace(',', '.').astype(float)
+    return df
+
+
 # Fonction pour charger les données (ajustez selon votre source de données)
 def load_data():
     # Exemple de chargement de données - remplacez par votre propre chargement de données
@@ -12,6 +19,13 @@ def load_data():
 
 # Charger les données
 df_chantiers, df_capteurs = load_data()
+
+colonnes_a_convertir = ['latitude', 'longitude']
+
+df_chantiers = convertir_et_nettoyer(df_chantiers, colonnes_a_convertir)
+
+colonnes_a_convertir_ = ['lat', 'lon']
+df_capteurs = convertir_et_nettoyer(df_capteurs, colonnes_a_convertir_)
 
 # Configurer la carte
 def create_map(df_chantiers, df_capteurs):
